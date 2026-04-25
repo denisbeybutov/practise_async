@@ -32,14 +32,33 @@
 
 //--------задача 3
 
-function addAsync(a, b, delay = 1000) {
+// function addAsync(a, b, delay = 1000) {
+//     return new Promise ((resolve,reject) => {
+//         setTimeout(() => {
+//             console.log('сумма через секунду');
+//             const sum = a + b;
+//             resolve(sum);
+//         }, delay)
+//     })
+// }
+
+// addAsync(2, 3).then(x => console.log(x)); // 5
+
+//--------задача 4
+
+function wait(delay) {
     return new Promise ((resolve,reject) => {
-        setTimeout(() => {
-            console.log('сумма через секунду');
-            const sum = a + b;
-            resolve(sum);
-        }, delay)
+        setTimeout(() => {            
+            resolve();
+        },delay)
+        
     })
+    
 }
 
-addAsync(2, 3).then(x => console.log(x)); // 5
+async function code() {
+	await wait(1000);
+	console.log('success') // Выведется через 1000 мс
+}
+
+code();
