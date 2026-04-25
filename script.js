@@ -12,3 +12,6 @@ delayedAdd(7, 3, 50, (err, sum) => {
   console.log('sum =', sum); // 5
 });
 
+function nex() {
+
+}
